@@ -1,3 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+@font-face {
+  font-family: 'Gill Sans';
+  src: url(./assets/GillSans/Gill-Sans.otf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Gill Sans Bold';
+  src: url(./assets/GillSans/Gill-Sans-Bold.otf);
+  font-weight: bold;
+}
+
 * {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #4369b2;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.back-home {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem;
+  margin: 0 1rem;
+  font-weight: 700;
+}
+
+.header-title {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+  font-family: Lato, sans-serif;
+}
+
+.mic-img,
+.settings-img {
+  filter: invert(1);
+  height: 1.5rem;
+  width: 1.5rem;
+  margin-right: 1rem;
 }
