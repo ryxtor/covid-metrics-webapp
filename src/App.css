@@ -35,7 +35,7 @@ header {
 }
 
 .header-title {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin: 0.5rem 0;
   font-family: Lato, sans-serif;
 }
@@ -46,4 +46,93 @@ header {
   height: 1.5rem;
   width: 1.5rem;
   margin-right: 1rem;
+}
+
+.region-cards-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.title-filter-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: #35548b;
+  color: #fff;
+  padding: 0.2rem 0.5rem;
+  font-family: Lato, sans-serif;
+}
+
+.title-filter-container button {
+  background-color: #5687e3;
+  border: none;
+  color: #fff;
+  padding: 0.2rem;
+  margin-left: 0.2rem;
+}
+
+.region-card {
+  height: 7rem;
+  background-color: #3f62a6;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.region-card:nth-child(4n+1),
+.region-card:nth-child(4n+4) {
+  background-color: #4167ae;
+}
+
+.uk-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+}
+
+.uk-map {
+  width: 100%;
+  margin: 2rem 0 2rem 1rem;
+  filter: invert(1);
+}
+
+.uk-stats {
+  font-size: 0.8rem;
+  font-family: Lato, sans-serif;
+  color: #fff;
+}
+
+.uk-stats p:first-child {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  font-family: 'Gill Sans', sans-serif;
+}
+
+.region-flag {
+  width: 5rem;
+  align-self: center;
+  margin-top: -0.7rem;
+}
+
+.arrow-logo {
+  width: 1rem;
+  align-self: flex-end;
+  filter: invert(1);
+  margin: 0.2rem 0.2rem 0 0;
+}
+
+.region-stats {
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+  align-self: end;
+  text-align: end;
+  font-family: 'Gill Sans', sans-serif;
+  font-size: 0.8rem;
+}
+
+.region-name {
+  font-size: 1rem;
+}
+
+.homepage {
+  background-color: #5687e3;
 }
