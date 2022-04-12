@@ -35,7 +35,7 @@ header {
 }
 
 .header-title {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin: 0.5rem 0;
   font-family: Lato, sans-serif;
 }
@@ -53,12 +53,25 @@ header {
   grid-template-columns: repeat(2, 1fr);
 }
 
-.region-title {
+.title-filter-container {
+  display: flex;
+  justify-content: space-between;
   background-color: #35548b;
   color: #fff;
+  padding: 0.2rem 0.5rem;
+  font-family: Lato, sans-serif;
+}
+
+.title-filter-container button {
+  background-color: #5687e3;
+  border: none;
+  color: #fff;
+  padding: 0.2rem;
+  margin-left: 0.2rem;
 }
 
 .region-card {
+  height: 7rem;
   background-color: #3f62a6;
   color: #fff;
   display: flex;
@@ -91,14 +104,24 @@ header {
 .uk-stats p:first-child {
   font-size: 1.4rem;
   margin-bottom: 1rem;
+  font-family: 'Gill Sans', sans-serif;
 }
 
 .region-flag {
   width: 5rem;
   align-self: center;
+  margin-top: -0.7rem;
+}
+
+.arrow-logo {
+  width: 1rem;
+  align-self: flex-end;
+  filter: invert(1);
+  margin: 0.2rem 0.2rem 0 0;
 }
 
 .region-stats {
+  margin-top: 0.5rem;
   margin-right: 0.5rem;
   align-self: end;
   text-align: end;

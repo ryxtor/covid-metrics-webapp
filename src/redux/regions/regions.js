@@ -1,15 +1,39 @@
+import flags from '../../assets/Flags/Flags';
+
 const REGIONS = 'covid/regions/regions';
+const ORDER_BY_MOST_DEATHS = 'covid/regions/order_by_most_deaths';
+const ORDER_BY_MOST_CONFIRMED = 'covid/regions/order_by_most_confirmed';
 
 const initialState = {
   totals: {},
   regions: [],
 };
 
+export const orderByMostDeaths = (regions) => {
+  const arr = regions;
+  arr.sort((a, b) => b.todayDeaths - a.todayDeaths);
+  return arr;
+};
+
+export const orderByMostConfirmed = (regions) => {
+  const arr = regions;
+  arr.sort((a, b) => b.todayConfirmed - a.todayConfirmed);
+  return arr;
+};
+
 export const regionsReducer = (state = initialState, action) => {
   switch (action.type) {
     case REGIONS:
       return {
-        ...action.payload,
+        ...action.payload, filter: 'default',
+      };
+    case ORDER_BY_MOST_CONFIRMED:
+      return {
+        ...state, regions: orderByMostConfirmed(state.regions), filter: 'confirmed',
+      };
+    case ORDER_BY_MOST_DEATHS:
+      return {
+        ...state, regions: orderByMostDeaths(state.regions), filter: 'deaths',
       };
     default:
       return state;
@@ -19,6 +43,14 @@ export const regionsReducer = (state = initialState, action) => {
 export const regionsData = (payload) => ({
   type: REGIONS,
   payload,
+});
+
+export const orderByDeaths = () => ({
+  type: ORDER_BY_MOST_DEATHS,
+});
+
+export const orderByConfirmed = () => ({
+  type: ORDER_BY_MOST_CONFIRMED,
 });
 
 export const getRegions = async () => {
@@ -36,7 +68,7 @@ export const getRegions = async () => {
     today_new_confirmed: todayConfirmed,
   } = data.dates['2022-04-11'].countries['United Kingdom'];
 
-  region.forEach((e) => {
+  region.forEach((e, i) => {
     regions.push({
       id: e.id,
       name: e.name,
@@ -44,6 +76,7 @@ export const getRegions = async () => {
       confirmed: e.today_confirmed,
       todayDeaths: e.today_new_deaths,
       todayConfirmed: e.today_new_confirmed,
+      flag: flags[i],
     });
   });
 

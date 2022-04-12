@@ -1,17 +1,19 @@
 import PropTypes from 'prop-types';
-import flags from '../../assets/Flags/Flags';
+import arrowLogo from '../../assets/right-arrow.png';
 
 const Region = ({
-  id, name, todayConfirmed, todayDeaths, i,
+  id, name, todayConfirmed, todayDeaths, filter, flag,
 }) => {
   console.log(id);
   return (
     <div id={id} className="region-card">
-      <img className="region-flag" src={flags[i].flag} alt={flags[i].name} />
+      <img className="arrow-logo" src={arrowLogo} alt="arrow" />
+      <img className="region-flag" src={flag.flag} alt={flag.name} />
       <div className="region-stats">
         <p className="region-name">{name}</p>
-        <p>{todayConfirmed}</p>
-        <p>{todayDeaths}</p>
+        { filter === 'default' && <p>{todayConfirmed}</p>}
+        { filter === 'confirmed' && <p>{todayConfirmed}</p>}
+        { filter === 'deaths' && <p>{todayDeaths}</p>}
       </div>
     </div>
   );
@@ -22,7 +24,8 @@ Region.propTypes = {
   name: PropTypes.string.isRequired,
   todayConfirmed: PropTypes.number.isRequired,
   todayDeaths: PropTypes.number.isRequired,
-  i: PropTypes.number.isRequired,
+  flag: PropTypes.instanceOf(Object).isRequired,
+  filter: PropTypes.string.isRequired,
 };
 
 export default Region;

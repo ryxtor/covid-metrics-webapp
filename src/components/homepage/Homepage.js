@@ -20,8 +20,8 @@ const Homepage = () => {
 
   const totalDeaths = `Total Deaths: ${regions.totals.deaths}`;
   const totalConfirmed = `Total Confirmed: ${regions.totals.confirmed}`;
-  const deathsToday = `Today Deaths: ${regions.totals.todayDeaths}`;
-  const confirmedToday = `Today Confirmed: ${regions.totals.todayConfirmed}`;
+  const deathsToday = `Today's Deaths: ${regions.totals.todayDeaths}`;
+  const confirmedToday = `Today's Confirmed: ${regions.totals.todayConfirmed}`;
 
   return (
     <div className="homepage">
