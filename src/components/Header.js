@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
-import mic from '../assets/microphone.png';
-import settings from '../assets/settings.png';
+import mic from '../assets/icons/microphone.png';
+import settings from '../assets/icons/settings.png';
 
 const Header = () => (
   <header>
