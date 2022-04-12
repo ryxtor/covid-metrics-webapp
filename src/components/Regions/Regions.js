@@ -6,8 +6,8 @@ const Regions = () => {
 
   return (
     <div>
-      <p>Stats by regions</p>
-      <div>
+      <p className="region-title">Stats by regions</p>
+      <div className="region-cards-container">
         {
           regions.regions.map((region) => (
             <Region
@@ -20,7 +20,6 @@ const Regions = () => {
             />
           ))
         }
-        asd
       </div>
     </div>
   );

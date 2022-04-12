@@ -47,3 +47,50 @@ header {
   width: 1.5rem;
   margin-right: 1rem;
 }
+
+.region-cards-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.region-title {
+  background-color: #35548b;
+  color: #fff;
+}
+
+.region-card {
+  background-color: #3f62a6;
+  color: #fff;
+}
+
+.region-card:nth-child(4n+1),
+.region-card:nth-child(4n+4) {
+  background-color: #4167ae;
+}
+
+.uk-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+}
+
+.uk-map {
+  width: 100%;
+  margin: 2rem 0 2rem 1rem;
+  filter: invert(1);
+}
+
+.uk-stats {
+  font-size: 0.8rem;
+  font-family: Lato, sans-serif;
+  color: #fff;
+}
+
+.uk-stats p:first-child {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.homepage {
+  background-color: #5687e3;
+}

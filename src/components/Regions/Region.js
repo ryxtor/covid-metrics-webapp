@@ -5,8 +5,8 @@ const Region = ({
 }) => {
   console.log(id);
   return (
-    <div id={id}>
-      <p>{name}</p>
+    <div id={id} className="region-card">
+      <p className="region-name">{name}</p>
       <p>{todayConfirmed}</p>
       <p>{todayDeaths}</p>
     </div>
