@@ -17,9 +17,9 @@ const Regions = () => {
   return (
     <div>
       <div className="title-filter-container">
-        <p className="region-title">Stats by regions</p>
+        <p className="region-title">STATS BY REGIONS</p>
         <div>
-          Filter:
+          FILTER:
           { filter === 'default' && <button type="button" onClick={filterConfirmed}>Default</button>}
           { filter === 'deaths' && <button type="button" onClick={filterConfirmed}>Most Deaths</button>}
           { filter === 'confirmed' && <button type="button" onClick={filterDeaths}>Most Confirmed</button>}
