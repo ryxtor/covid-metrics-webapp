@@ -4,6 +4,21 @@ const REGIONS = 'covid/regions/regions';
 const ORDER_BY_MOST_DEATHS = 'covid/regions/order_by_most_deaths';
 const ORDER_BY_MOST_CONFIRMED = 'covid/regions/order_by_most_confirmed';
 
+const d = new Date();
+const year = d.getFullYear();
+let day = (d.getDate() - 1).toString();
+let month = (d.getMonth() + 1).toString();
+
+if (day.length === 1) {
+  day = `0${day}`;
+}
+
+if (month.length === 1) {
+  month = `0${month}`;
+}
+
+const date = `${year}-${month}-${day}`;
+
 const initialState = {
   totals: {},
   regions: [],
@@ -54,7 +69,7 @@ export const orderByConfirmed = () => ({
 });
 
 export const getRegions = async () => {
-  const API = 'https://api.covid19tracking.narrativa.com/api/2022-04-11/country/united_kingdom';
+  const API = `https://api.covid19tracking.narrativa.com/api/${date}/country/united_kingdom`;
   const response = await fetch(API);
   const data = await response.json();
   const regions = [];
@@ -66,7 +81,7 @@ export const getRegions = async () => {
     today_confirmed: confirmed,
     today_new_deaths: todayDeaths,
     today_new_confirmed: todayConfirmed,
-  } = data.dates['2022-04-11'].countries['United Kingdom'];
+  } = data.dates[date].countries['United Kingdom'];
 
   region.forEach((e, i) => {
     regions.push({
