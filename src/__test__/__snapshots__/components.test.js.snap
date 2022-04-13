@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing Components Render Header 1`] = `
+<header>
+  <a
+    aria-current="page"
+    className="back-home active"
+    href="/"
+    onClick={[Function]}
+  >
+    &lt;
+  </a>
+  <h1
+    className="header-title"
+  >
+    Covid Stats
+  </h1>
+  <div>
+    <img
+      alt="microphone"
+      className="mic-img"
+      src="microphone.png"
+    />
+    <img
+      alt="settings"
+      className="settings-img"
+      src="settings.png"
+    />
+  </div>
+</header>
+`;
+
+exports[`Testing Components Render Homepage 1`] = `
+<div
+  className="homepage"
+>
+  <div
+    className="uk-container"
+  >
+    <img
+      alt="map"
+      className="uk-map"
+      src="uk-map.png"
+    />
+    <div
+      className="uk-stats"
+    >
+      <p>
+        UNITED KINGDOM
+      </p>
+      <p>
+        Total Confirmed: undefined
+      </p>
+      <p>
+        Total Deaths: undefined
+      </p>
+      <p>
+        Today's Confirmed: undefined
+      </p>
+      <p>
+        Today's Deaths: undefined
+      </p>
+    </div>
+  </div>
+  <div>
+    <div
+      className="title-filter-container"
+    >
+      <p
+        className="region-title"
+      >
+        STATS BY REGIONS
+      </p>
+      <div>
+        FILTER:
+      </div>
+    </div>
+    <div
+      className="region-cards-container"
+    />
+  </div>
+</div>
+`;
+
+exports[`Testing Components Render Regions 1`] = `
+<div>
+  <div
+    className="title-filter-container"
+  >
+    <p
+      className="region-title"
+    >
+      STATS BY REGIONS
+    </p>
+    <div>
+      FILTER:
+    </div>
+  </div>
+  <div
+    className="region-cards-container"
+  />
+</div>
+`;
